@@ -1,40 +1,21 @@
+/* Ngozi's CSS begins here */
 body {
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
+    background: #0984e3;
+    border-radius: 30%;
 }
 a{
     text-decoration: none;
     font-size: 1.3rem;
 }
 
-@mixin grid($val) {
-    display: grid;
-    grid-templete-columns: repeat(auto-fit, minmax($val, 1fr));
-    gap: 2rem;
-}
 
 html {
     overflow-x: hidden;
     font-size: 62.5%;
-
-    &::-webkit-scrollbar {
-        width: 1rem;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: #eee;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: #0984e3;
-        border-radius: 5rem;
-    }
-
 }
 
-body {
-    background: #0984e3;
-}
 
 
 .header {
@@ -47,34 +28,40 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 9%;
+    padding: 2rem 12%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: navy;
     font-weight: bolder;
+    
 }
 
 .search-form {
     border-radius: 10rem;
-    height: 2rem;
+    border: none;
+    height: 3rem;
     width: 20rem;
     padding: 0 2rem;
     display: flex;
     align-items: center;
     background: #fff;
-    margin-left: 2rem;
+    margin-left: 6rem;
+    text-decoration: none;
 }
 
-
-input {
-    width: 100%;
-    padding-right: 1rem;
-    font-size: 1rem;
-    text-transform: none;
-    color: #666;
+.search-form input{
+    background: transparent;
+    border: 0;
+    padding: 0 25px 0 .5em;
+    height: 30px;
+    width: 200px;
 }
+
 
 label {
     font-size: 1rem;
@@ -86,7 +73,16 @@ label:hover {
     color: blue;
 }
 
+.navbar-nav>li {
+    padding-left: 20px;
+    padding-right: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1rem;
+    font-weight: bold;
 
+    
+}
 .icons a {
     font-size: 1.3rem;
     margin-left: 1rem;
@@ -98,42 +94,35 @@ label:hover {
     color: gold;
 
 }
-
-
-.collapse navbar-collapse {
-    padding-top: 1rem;
+.box{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}
-
-.nav-item a {
-    display: block;
-    padding: 1rem 2rem;
-    font-size: 1.4rem;
-    color: #666;
-    text-decoration: none;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
-}
-
-.nav-item a:hover {
-    color: #9984e3;
-}
-
-
-.nav-item a i {
-    padding-right: 2rem;
-    text-decoration: none;
-}
-
-.nnav-item i {
-    padding-right: .5rem;
-
+    height: 150px;
+    width: 350px;
+    margin-right: 20px;
 
 }
+.box .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .content h3 {
+    color: #fff;
+    font-size: 1.7rem;
+}
+.box .image{
+    width: 150px;
+    height: 150px;
+}
+.box .image img{
+    width: 100%;
+    height: 100%;
+}
+
 .hero-container {
     background-color: rgb(252, 247, 247);
 }
@@ -145,33 +134,9 @@ section.hero {
 
 h1 {
     font-size: 3rem;
-    margin-top: 2em;
     line-height: 3.3rem;
-}
+} 
 
-button {
-    background-color: #fff;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 10px;
-}
-.hero-img{
-    position: relative;
-    top: 0;
-    left: 0;
-    background: url('./images/hero-pix1.jpg');
-    background-size:fit;
-    background-position-x: 20%;
-    background-position-y: 20%;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-   
-}
 section.hero {
     color: black;
     height: 90vh;
@@ -223,24 +188,11 @@ section.hero {
 }
 .box-container {
     display: flex;
-    height: 30rem;
-    overflow: hidden;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     align-items: center;
     justify-content: space-evenly;
-}
-
-.box-container.banner-images {
-    height: 50%;
-    width: 50%;
-    object-fit: cover;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid #666;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    flex-direction: row;
+    margin-top: 30px;
+    padding-top: 5%;
 }
 
 .banner-images {
@@ -248,22 +200,13 @@ section.hero {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* background-color: #fff; */
-    height: 200px;
-    width: 200px;
-    /* border: 3px solid #666; */
+    height: 100px;
+    width: 100px;
     
 }
 
 .banner-images:hover {
     transform: scale(1.1);
-}
-
-.banner-images .img {
-    width: 150px;
-    height: 200px;
-
-
 }
 
 .banner-images img {
@@ -272,38 +215,26 @@ section.hero {
     object-fit: cover
 }
 
-.banner-images .span {
-    font-size: 1.7rem;
-    columns: #9984e3;
-}
 
-.banner-images .h3 {
-    font-size: 2rem;
-    color: #333;
-    padding: .5rem 0;
-} 
-.content h3 {
-    font-size: 1rem;
-    color: #333;
-}
-
-.content span {
+.banner-images span {
     font-size: 1rem;
     color: #333;
     font-weight: bold;
 }
 
-.content h2 {
+.banner-images h2 {
     font-size: 1rem;
     color: #333;
     font-weight: bold;
-    margin-left: 4px;
+   
 }
-.content1 h3{
-    font-size: 1.8rem;
-        color: #333;
-        margin-left: 5px;
-    }
+
+.banner-images .content p {
+    font-size: 1rem;
+    color: #333;
+
+}
+
 .content1 h2 {
     font-size: 2rem;
     color: #333;
@@ -312,20 +243,50 @@ section.hero {
     margin-left: 8px;
     text-transform:none;
 }
+
+    
+
 .btn {
-    margin-top: 1rem;
     display: inline-block;
-    border-radius: .5rem;
-    padding: 1rem 3rem;
-    font-size: 1.7;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
     color: #fff;
     cursor: pointer;
-    background: #9984e3;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100px;
+    border-color: #fff;
+    margin-top: 4px;
 }
 
 .btn:hover {
-    background: #333;
+    background: #fff;
 }
+
+.content1 .btn {
+   display: inline-block;
+   border-radius: 15px;
+   font-size: 10px;
+   font-weight: bold;
+   color: #333;
+   cursor: pointer;
+   background-color: #fff;
+   height: 30px;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   width: 100px;
+   border-color: #333;
+}
+
+.content1 .btn:hover {
+    background: wheat;
+}
+
+
 
 .home {
     background: #fff;
@@ -338,66 +299,91 @@ section.hero {
     gap: 2rem;
 }
 
-.image {
-    flex: 1 1 42rem;
-    text-align: center;
-}
-
-.image img {
-    height: 40rem;
-}
-
-.slide h3{
-    font-size: 2rem;
-    /* flex: 1 1 42rem; */
-}
-.slide h2{
-    padding-top: .2rem;
-    color: #333;
-    font-size: 6rem;
-    /* flex: 1 1 42rem */
-}
-.slide p{
-    font-size: 1.8rem;
-        color: #333;
-        margin-left: 5px;
-}
-
-.btn {
-    margin-top: 1rem;
-    display: inline-block;
-    border-radius: .5rem;
-    padding: 1rem 3rem;
-    font-size: 1.7;
-    color: #fff;
-    cursor: pointer;
-    background: #9984e3;
-}
-
-.btn:hover {
-    background: #333;
-}
-
-.gear .box {
-    /* border-radius: 5rem;
-    border: .2rem solid #333;
-    padding: 2rem; */
+.bike{
+    background-color: #fff;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    height: 200px;
+    width: 300px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content:center;
+    /* align-items: center; */
+}
+.bike_img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+.bike img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .content h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 55px;
+    margin-left: 50px;
+}
+.slide .content h2{
+    padding-top: 2rem;
+    padding-left: 50px;
+    color: #333;
+    font-size: 2rem;
+    margin-left: 50px;
+}
+.slide .content p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    padding-left: 55px;
+    margin-left: 50px;
+}
+
+.slide .content .btn {
+    display: inline-block;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background-color: #fff;
+    height: 30px;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    background: #fff;
+    display: flex;
+    width: 100px;
+    border-color: #333;
+    margin-left: 100px;
+ 
 }
 
-
-.gear .box-container {
-    @include grid(33rem)
+.slide .content .btn:hover {
+    background: wheat;
+    
 }
 
-.gear:hover {
-    background: #666;
-    animation: fadeIn .2s linear;
+.slide {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10rem;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.slide .image img {
+    height: 40rem;
+    padding-right: 50px;
+    padding-top: 30px;
+    margin-top: 20px;
+
 }
 
 @keyframes fadeIn {
@@ -407,36 +393,149 @@ section.hero {
     }
 }
 
-.image img {
-    height: 25rem;
+    .box .image img{
+        width: 150px;
+        height: 25rem;
+        object-fit: cover;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+
+    .content h3 {
+        font-size: 2rem;
+        color: #333;
+        padding-left: 20px;
+        margin-left: 10px;
+    }
+
+
+
+
+        .quick-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #0984e3;
+            justify-content: space-between;
+            padding-top: 50px;
+            margin-top: 50px;
+            padding: 1rem 3%;
+
+        }
+    
+        .quick-links logo {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+    
+        .quick-links i {
+            color: gold;
+        }
+    
+        .links a {
+            margin: 0 1rem;
+            font-size: 1.4rem;
+            color: #fff;
+            text-decoration: none;
+        }
+    
+        .links a:hover {
+            color: gold;
+        }
+    
+        .share a {
+            font-size: 2rem;
+            color: #fff;
+            margin-left: 2rem;
+            text-decoration: none;
+        }
+    
+        .share a:hover {
+            color: gold;
+        }
+    
+        .credit {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #fff;
+            justify-content: space-between;
+            padding: 1rem 6%;
+        }
+    
+        .credit p {
+            font-size: 1.5rem;
+            color: #666;
+        }
+    
+        .credit span {
+            color: #9984e3;
+        }
+    
+        .credit img {
+            height: 4rem;
+            filter: drop-shadow(0, 0, 0, #333);
+        }
+           
+
+
+.arrivals .box-container {
+    @include grid(33rem)
+}
+
+
+
+
+.box .image img {
+    height: 15rem;
+    background: transparent;
+    
 
 }
 
-.content h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.content .price {
-    padding-top: .5rem;
-    font-size: 2rem;
-    color: #9984e3;
-    padding-bottom: .7rem;
-}
-
-.gear .content span {
-    font-size: 1.5rem;
-    color: #666;
-    text-decoration: line-through;
-}
-
-.content .stars {
-    font-size: 1.2rem;
-    color: gold;
-}
-
-.gear .box-container .box {
-    flex-flow: column;
+.arrivals .box-container .box {
+    flex-flow: row;
     gap: 2rem;
     text-align: center;
+    padding-top: 10PX;
+    margin-top: 10PX;
+    box-sizing: border-box;
 }
+
+.arrivals .box-container .bkg1 {
+    background-color: #2599f1;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 1rem;
+    padding-bottom: 10PX;
+    margin-bottom: 10PX;
+}
+
+.arrivals .box-container .bkg2 {
+    background-color: rgb(221, 14, 14);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 10PX;
+    margin-bottom: 10PX;
+}
+
+.arrivals .box-container .bkg3 {
+    background-color: #2599f1;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 10PX;
+    margin-bottom: 10PX;
+}
+
+/* Ngozi's CSS ends here */
